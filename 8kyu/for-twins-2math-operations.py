@@ -1,1 +1,2 @@
-return (bottle_length - rim_length) * 2 * radius ** 2
+def ice_brick_volume(radius, bottleLength, rimLength):
+    return 2 * radius**2 * (bottleLength - rimLength)
