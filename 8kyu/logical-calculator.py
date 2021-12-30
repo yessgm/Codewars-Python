@@ -1,10 +1,11 @@
 def logical_calc(array, op):
-    logical = {
-        "AND" : lambda a,b: a and b,
-        "OR" : lambda a,b: a or b,
-        "XOR" : lambda a,b: a != b
-    }
-    bool = True
-    for i in range(len(array)-1):
-        bool = logical[op](array[i], array[i+1])
-    return bool
+    res = array[0]
+    for x in array[1:]:
+        if op == "AND":
+            res &= x
+        elif op == "OR":
+            res |= x
+        else:
+            res ^= x
+
+    return res #boolean
